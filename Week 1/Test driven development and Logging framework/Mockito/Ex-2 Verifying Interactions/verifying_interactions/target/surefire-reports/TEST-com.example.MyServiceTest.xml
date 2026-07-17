@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.example.MyServiceTest" time="0.008" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\Mayank Data\Cognizant\Progress\Week 1\Test driven development and Logging framework\Mockito\Ex-2 Verifying Interactions\verifying_interactions\target\test-classes;D:\Mayank Data\Cognizant\Progress\Week 1\Test driven development and Logging framework\Mockito\Ex-2 Verifying Interactions\verifying_interactions\target\classes;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-23\bin"/>
+    <property name="sun.java.command" value="C:\Users\Mayank\AppData\Local\Temp\surefire11116657884781049702\surefirebooter-20260702222126991_3.jar C:\Users\Mayank\AppData\Local\Temp\surefire11116657884781049702 2026-07-02T22-21-25_992-jvmRun1 surefire-20260702222126991_1tmp surefire_0-20260702222126991_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\Mayank Data\Cognizant\Progress\Week 1\Test driven development and Logging framework\Mockito\Ex-2 Verifying Interactions\verifying_interactions\target\test-classes;D:\Mayank Data\Cognizant\Progress\Week 1\Test driven development and Logging framework\Mockito\Ex-2 Verifying Interactions\verifying_interactions\target\classes;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Mayank"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-10-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-23"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\Mayank Data\Cognizant\Progress\Week 1\Test driven development and Logging framework\Mockito\Ex-2 Verifying Interactions\verifying_interactions"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Mayank\AppData\Local\Temp\surefire11116657884781049702\surefirebooter-20260702222126991_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="23.0.1+11-39"/>
+    <property name="user.name" value="Mayank"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Mayank\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Mayank\AppData\Local\Temp\"/>
+    <property name="java.version" value="23.0.1"/>
+    <property name="user.dir" value="D:\Mayank Data\Cognizant\Progress\Week 1\Test driven development and Logging framework\Mockito\Ex-2 Verifying Interactions\verifying_interactions"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-23\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\app\Mayank\product\21c\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\CMake\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\8.0\bin;C:\Program Files\MongoDB\Tools\100\bin;C:\Program Files\dotnet\;C:\Program Files\PostgreSQL\18\bin;C:\apache-maven-3.9.16\bin;C:\Users\Mayank\.local\bin;C:\Users\Mayank\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Mayank\AppData\Local\Programs\Python\Python39\;C:\Users\Mayank\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Mayank\AppData\Local\Programs\Python\Python310\;C:\Users\Mayank\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\Mayank\AppData\Local\Programs\Python\Python37\;C:\Users\Mayank\.cargo\bin;C:\Users\Mayank\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3.1\bin;C:\MinGW\bin;C:\Users\Mayank\AppData\Roaming\npm;C:\Users\Mayank\AppData\Local\Programs\mongosh\;C:\Users\Mayank\AppData\Local\Programs\Ollama;C:\Users\Mayank\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="23.0.1+11-39"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="com.example.MyServiceTest.testVerifyInteraction()" classname="com.example.MyServiceTest" time="0.001">
+    <failure message="Unresolved compilation problems: &#10;	Test cannot be resolved to a type&#10;	The method mock(Class&lt;ExternalApi&gt;) is undefined for the type MyServiceTest&#10;	The method verify(ExternalApi) is undefined for the type MyServiceTest&#10;" type="java.lang.Error"><![CDATA[java.lang.Error: 
+Unresolved compilation problems: 
+	Test cannot be resolved to a type
+	The method mock(Class<ExternalApi>) is undefined for the type MyServiceTest
+	The method verify(ExternalApi) is undefined for the type MyServiceTest
+
+	at com.example.MyServiceTest.testVerifyInteraction(MyServiceTest.java:9)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.maven.surefire.junit.PojoTestSetExecutor.executeTestMethod(PojoTestSetExecutor.java:104)
+	at org.apache.maven.surefire.junit.PojoTestSetExecutor.execute(PojoTestSetExecutor.java:63)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:131)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:93)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+  </testcase>
+</testsuite>

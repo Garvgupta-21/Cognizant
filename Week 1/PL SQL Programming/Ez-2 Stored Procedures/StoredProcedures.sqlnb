@@ -1,0 +1,208 @@
+cells:
+  - kind: 2
+    value: "CREATE TABLE accounts (\r
+
+      \    account_id NUMBER PRIMARY KEY,\r
+
+      \    customer_id NUMBER,\r
+
+      \    account_type VARCHAR2(20),\r
+
+      \    balance NUMBER\r
+
+      );\r
+
+      \r
+
+      CREATE TABLE employees (\r
+
+      \    emp_id NUMBER PRIMARY KEY,\r
+
+      \    name VARCHAR2(50),\r
+
+      \    department VARCHAR2(50),\r
+
+      \    salary NUMBER\r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO accounts VALUES (1, 101, 'SAVINGS', 10000);\r
+
+      INSERT INTO accounts VALUES (2, 102, 'SAVINGS', 20000);\r
+
+      INSERT INTO accounts VALUES (3, 103, 'CURRENT', 15000);\r
+
+      \r
+
+      INSERT INTO employees VALUES (1, 'Amit', 'IT', 50000);\r
+
+      INSERT INTO employees VALUES (2, 'Riya', 'HR', 45000);\r
+
+      INSERT INTO employees VALUES (3, 'John', 'IT', 60000);\r
+
+      \r
+
+      COMMIT;"
+    languageId: oracle-sql
+  - kind: 1
+    value: "#### PROCEDURE 1 — MONTHLY INTEREST"
+    languageId: markdown
+  - kind: 2
+    value: "CREATE OR REPLACE PROCEDURE ProcessMonthlyInterest AS\r
+
+      BEGIN\r
+
+      \    UPDATE accounts\r
+
+      \    SET balance = balance * 1.01\r
+
+      \    WHERE account_type = 'SAVINGS';\r
+
+      \r
+
+      \    COMMIT;\r
+
+      END;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 1
+    value: "#### PROCEDURE 2 — EMPLOYEE BONUS"
+    languageId: markdown
+  - kind: 2
+    value: "CREATE OR REPLACE PROCEDURE UpdateEmployeeBonus(\r
+
+      \    p_department IN VARCHAR2,\r
+
+      \    p_bonus_percent IN NUMBER\r
+
+      ) AS\r
+
+      BEGIN\r
+
+      \    UPDATE employees\r
+
+      \    SET salary = salary + (salary * p_bonus_percent / 100)\r
+
+      \    WHERE department = p_department;\r
+
+      \r
+
+      \    COMMIT;\r
+
+      END;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 2
+    value: "BEGIN\r
+
+      \    UpdateEmployeeBonus('IT', 10);\r
+
+      END;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 1
+    value: "#### PROCEDURE 3 — TRANSFER FUNDS (FULL SAFE VERSION)"
+    languageId: markdown
+  - kind: 2
+    value: "CREATE OR REPLACE PROCEDURE TransferFunds(\r
+
+      \    p_from_account IN NUMBER,\r
+
+      \    p_to_account IN NUMBER,\r
+
+      \    p_amount IN NUMBER\r
+
+      ) AS\r
+
+      \r
+
+      \    v_balance NUMBER;\r
+
+      \r
+
+      BEGIN\r
+
+      \r
+
+      \    -- check balance\r
+
+      \    SELECT balance INTO v_balance\r
+
+      \    FROM accounts\r
+
+      \    WHERE account_id = p_from_account;\r
+
+      \r
+
+      \    -- validation\r
+
+      \    IF v_balance < p_amount THEN\r
+
+      \        DBMS_OUTPUT.PUT_LINE('Insufficient Balance');\r
+
+      \        RETURN;\r
+
+      \    END IF;\r
+
+      \r
+
+      \    -- debit\r
+
+      \    UPDATE accounts\r
+
+      \    SET balance = balance - p_amount\r
+
+      \    WHERE account_id = p_from_account;\r
+
+      \r
+
+      \    -- credit\r
+
+      \    UPDATE accounts\r
+
+      \    SET balance = balance + p_amount\r
+
+      \    WHERE account_id = p_to_account;\r
+
+      \r
+
+      \    COMMIT;\r
+
+      \r
+
+      \    DBMS_OUTPUT.PUT_LINE('Transfer Successful');\r
+
+      \r
+
+      EXCEPTION\r
+
+      \    WHEN OTHERS THEN\r
+
+      \        ROLLBACK;\r
+
+      \        DBMS_OUTPUT.PUT_LINE('Transaction Failed');\r
+
+      \r
+
+      END;\r
+
+      /\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "BEGIN\r
+
+      \    TransferFunds(1, 2, 5000);\r
+
+      END;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT * FROM accounts;\r
+
+      SELECT * FROM employees;"
+    languageId: oracle-sql
